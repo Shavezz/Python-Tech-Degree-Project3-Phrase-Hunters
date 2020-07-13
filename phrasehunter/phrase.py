@@ -16,7 +16,7 @@ class Phrase:
         if guessed_phrase == phrase:
             was_guessed_phrase = True
 
-    def show_phrase():
+    def show_phrase(self):
         if was_guessed_phrase == True:
             print (phrase)
             

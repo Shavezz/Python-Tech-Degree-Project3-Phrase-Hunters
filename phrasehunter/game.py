@@ -12,33 +12,30 @@ PHRASES =[
 ]
 
 phrase = random.choice(PHRASES)
-
-#Character = Character()
 Phrase = Phrase(phrase)
 
 
-phrase = random.choice(PHRASES)
 #Phrase.phrase = phrase
-game = Game()
+
 
 class Game:
     def __init__(self, PHRASES):
         self.PHRASES = PHRASES
 
 
-    def start_game():
-        #while Phrase.was_guessed_phrase == False:
-            game.show_underscores()
+    def start_game(self):
+        while Phrase.was_guessed_phrase == False:
+            self.show_underscores()
             guess = input(print('Guess a letter: '))
             
         
 
-    #def show_win_screen():
+    #def show_win_screen(self):
 
-    #def show_lose_screen():
+    #def show_lose_screen(self):
 
 
-    def getting_players_input():
+    def getting_players_input(self):
         #pass this info to Phrase.py
         if was_guessed_phrase.check_if_guessed.Phrase == True:
             show_win_screen()
@@ -47,13 +44,14 @@ class Game:
             show_lose_screen()
 
 
-    def show_underscores():
+    def show_underscores(self):
         underscores = '_' * len(phrase)
         print (underscores)
 
         #for spaces in phrase:
             #phrase.replace(' ', ' ')
-    
-    start_game()
+
+Game = Game(Phrase)    
+Game.start_game()
 
       
