@@ -19,6 +19,7 @@ Phrase = Phrase(phrase)
 
 phrase = random.choice(PHRASES)
 #Phrase.phrase = phrase
+game = Game()
 
 class Game:
     def __init__(self, PHRASES):
@@ -27,7 +28,7 @@ class Game:
 
     def start_game():
         #while Phrase.was_guessed_phrase == False:
-            #show_underscores()
+            game.show_underscores()
             guess = input(print('Guess a letter: '))
             
         
