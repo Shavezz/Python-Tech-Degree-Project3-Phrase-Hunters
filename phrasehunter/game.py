@@ -15,9 +15,6 @@ phrase = random.choice(PHRASES)
 Phrase = Phrase(phrase)
 
 
-#Phrase.phrase = phrase
-
-
 class Game:
     def __init__(self, PHRASES):
         self.PHRASES = PHRASES
@@ -27,6 +24,10 @@ class Game:
         while Phrase.was_guessed_phrase == False:
             self.show_underscores()
             guess = input(print('Guess a letter: '))
+            Character = Character(guess) #here I am making the 'guess' that user will input equal to the original_char in the Character class
+            if guess == Character.original_char:
+                Phrase.was_guessed_phrase == True
+                
             
         
 
@@ -45,11 +46,25 @@ class Game:
 
 
     def show_underscores(self):
-        underscores = '_' * len(phrase)
-        print (underscores)
+        spacing = ''
+        for spaces in phrase:
+            if spaces != ' ':
+                spacing += '_'
+            else:
+                spacing += ' '
+        print(spacing)
+
+
+        #for char in phrase:
+            #print('_', end=" ")
+
+        #underscores = '_' * len(phrase)
+        #print (underscores)
 
         #for spaces in phrase:
             #phrase.replace(' ', ' ')
+
+
 
 Game = Game(Phrase)    
 Game.start_game()

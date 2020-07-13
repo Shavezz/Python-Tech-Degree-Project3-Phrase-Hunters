@@ -1,18 +1,17 @@
 class Character:
-    def __init__(self, char):
-        self.original = char
-        was_guessed = False
+    def __init__(self, char1):
+        self.original_char = char1
+        was_guessed_character = False
 
     def update(self, guess):
-        if guess == original:
-            was_guessed == True
+        if guess == original_char:
+            was_guessed_character == True
         
 
 
     def show_character():
-        if was_guessed == True and len(char) == 1 and original.isalpha():
-            print(original)
-
+        if was_guessed_character == True and len(original_char) == 1 and original_char.isalpha():
+            print(original_char)
         else:
             print("_")
 
